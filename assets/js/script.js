@@ -9,6 +9,9 @@ const som_alarme = new Audio("alarme.mp3");
 
 som_alarme.loop=-1;
 
-
+let ts_atual = null;
+let ts_alarme = null;
+let alarme_ativado = false;
+let alarme_tocando = false;
 
 const data = new Date();
