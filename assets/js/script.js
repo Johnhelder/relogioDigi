@@ -14,4 +14,12 @@ let ts_alarme = null;
 let alarme_ativado = false;
 let alarme_tocando = false;
 
+btn_ativar.addEventListener("click", ()=>{
+  ts_atual = Date.now();
+  ts_alarme = ts_atual + (tmp_alarme.value*1000)
+  alarme_ativado = true;
+  const dt_alarme = new Date(ts_alarme);
+  hora_alarme.innerHTML=("Hora do alarme:"+dt_alarme.getHours()+":"+dt_alarme.getMinutes()+":"+dt_alarme.getSeconds())
+});
+
 const data = new Date();
