@@ -22,4 +22,14 @@ btn_ativar.addEventListener("click", ()=>{
   hora_alarme.innerHTML=("Hora do alarme:"+dt_alarme.getHours()+":"+dt_alarme.getMinutes()+":"+dt_alarme.getSeconds())
 });
 
+btn_parar.addEventListener("click",()=>{
+  alarme_ativado = false;
+  alarme_tocando = false;
+  hora_alarme.innerHTML = "Hora do alarme:";
+  tmp_alarme.value = 0;
+  timer.classList.remove("alarme");
+  audio.pause();
+  audio.currentTime = 0;
+});
+
 const data = new Date();
