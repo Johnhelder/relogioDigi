@@ -42,4 +42,12 @@ const relogio=()=>{
   segundo=segundo<10?"0"+segundo:segundo;
   const hora_completa=hora+":"+minuto+":"+segundo;
   div_relogio.innerHTML = hora_completa;
+  if(alarme_ativo && !alarme_tocando){
+    if(data.getTime() >= ts_alarme){
+      alarme_tocando=true;
+      som_alarme.play();
+      timer.classList.add("alarme");
+    }
+  }
+
 }
