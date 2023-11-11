@@ -51,3 +51,5 @@ const relogio=()=>{
   }
 
 }
+
+const intervalo = setInterval(relogio, 1000);
